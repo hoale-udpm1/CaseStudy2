@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="552.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <children>
+        <TableView fx:id="table" layoutY="280.0" prefHeight="274.0" prefWidth="786.0" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="280.0">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nameColumn" prefWidth="241.0" text="Name" />
+                <TableColumn fx:id="amountColumn" prefWidth="59.0" text="Amount" />
+                <TableColumn fx:id="authorColumn" minWidth="0.0" prefWidth="98.0" text="Author" />
+            <TableColumn fx:id="priceColumn" minWidth="5.0" prefWidth="153.0" text="Price" />
+            <TableColumn prefWidth="159.0" text="Date" />
+            </columns>
+        </TableView>
+        <Label layoutX="39.0" layoutY="21.0" text="ID" />
+        <Label layoutX="29.0" layoutY="55.0" text="Name" />
+        <Label layoutX="27.0" layoutY="129.0" text="Author" />
+        <Label layoutX="26.0" layoutY="167.0" text="Price" />
+        <Button alignment="CENTER_RIGHT" layoutX="113.0" layoutY="218.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="65.0" text="Add" />
+        <Button alignment="CENTER_RIGHT" layoutX="595.0" layoutY="134.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="65.0" text="Delete" textFill="RED" />
+      <TextField fx:id="idText" layoutX="71.0" layoutY="17.0" />
+      <TextField fx:id="nameText" layoutX="72.0" layoutY="51.0" />
+      <TextField fx:id="authorText" layoutX="71.0" layoutY="125.0" />
+      <TextField fx:id="priceText" layoutX="71.0" layoutY="163.0" />
+      <AmbientLight color="CHARTREUSE" layoutX="571.0" layoutY="137.0" lightOn="true" />
+      <Button alignment="CENTER_RIGHT" layoutX="690.0" layoutY="134.0" mnemonicParsing="false" onAction="#changeSceneBookDetail" prefHeight="25.0" prefWidth="65.0" text="Detail" textFill="#241bd1" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="598.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/trash-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="25.0" layoutX="690.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/application-view-detail-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="25.0" fitWidth="65.0" layoutX="146.0" layoutY="488.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fitHeight="17.0" fitWidth="25.0" layoutX="121.0" layoutY="222.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/add-1-icon.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="searchField" layoutX="606.0" layoutY="30.0" onAction="#search" promptText="Search" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="571.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Start-Menu-Search-icon.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="595.0" layoutY="184.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="65.0" text="Edit" textFill="#0fa10a" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="598.0" layoutY="188.0" onDragDetected="#update" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/edit-file-icon.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="690.0" layoutY="184.0" mnemonicParsing="false" onAction="#writeFile" prefHeight="25.0" prefWidth="65.0" text="Save" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="690.0" layoutY="188.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Save-icon.png" />
+         </image>
+      </ImageView>
+      <Button alignment="CENTER_RIGHT" layoutX="595.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="Login" />
+      <Button alignment="CENTER_RIGHT" layoutX="690.0" layoutY="230.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="65.0" text="logout" />
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="598.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/Apps-preferences-system-login-icon.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="17.0" fitWidth="17.0" layoutX="690.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@image/logout-icon.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="24.0" layoutY="93.0" text="Amount" />
+      <TextField fx:id="amountText" layoutX="71.0" layoutY="89.0" />
+      <DatePicker layoutX="269.0" layoutY="18.0" prefHeight="25.0" prefWidth="155.0" />
+      <ImageView fx:id="imageView" fitHeight="150.0" fitWidth="155.0" layoutX="269.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="484.0" layoutY="210.0" mnemonicParsing="false" onAction="#imageButton" text="Button" />
+    </children>
+</AnchorPane>
